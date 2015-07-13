@@ -1,9 +1,12 @@
 import os
 import shutil
 lis=[]
+i=1
 destinationDir='C:\Users\Prasanth\Desktop\Desktop'
-if not os.path.exists(destinationDir): 
-	os.makedirs(destinationDir)
+while os.path.exists(destinationDir):
+	destinationDir=destinationDir+str(i)
+	i+=1
+os.makedirs(destinationDir)
 lis=os.listdir('C:\Users\Prasanth\Desktop')
 print lis
 for x in lis:
